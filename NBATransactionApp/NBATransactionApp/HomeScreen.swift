@@ -1,5 +1,5 @@
 //
-//  AddScreen.swift
+//  HomeScreen.swift
 //  NBATransactionApp
 //
 //  Created by csuftitan on 12/10/21.
@@ -17,12 +17,9 @@ class AddScreen: UIViewController {
         
         // Loads database with team info and player info
         // ** ONLY RUN ONCE WHEN INITIALIZING DATABASE **
-         //insertTeams(store: store)
-         //insertPlayers(store: store)
+      
     }
     
     
     
 }
-
-
