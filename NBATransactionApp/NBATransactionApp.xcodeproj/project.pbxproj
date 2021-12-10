@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A5EE1972762F8B5006F63A8 /* InsertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EE1962762F8B5006F63A8 /* InsertData.swift */; };
+		7A88FE4327619247006C6108 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A88FE4227619247006C6108 /* Transactions.swift */; };
+		7A88FE4627619925006C6108 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 7A88FE4527619925006C6108 /* SQLite */; };
+		7A88FE4827619955006C6108 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A88FE4727619955006C6108 /* DataStore.swift */; };
 		7AD71C52276045EF003469BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD71C51276045EF003469BF /* AppDelegate.swift */; };
 		7AD71C54276045EF003469BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD71C53276045EF003469BF /* SceneDelegate.swift */; };
 		7AD71C56276045EF003469BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD71C55276045EF003469BF /* ViewController.swift */; };
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A5EE1962762F8B5006F63A8 /* InsertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertData.swift; sourceTree = "<group>"; };
+		7A88FE4227619247006C6108 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		7A88FE4727619955006C6108 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		7AD71C4E276045EF003469BF /* NBATransactionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBATransactionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD71C51276045EF003469BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AD71C53276045EF003469BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A88FE4627619925006C6108 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +114,9 @@
 				7AD71C5A276045F0003469BF /* Assets.xcassets */,
 				7AD71C5C276045F0003469BF /* LaunchScreen.storyboard */,
 				7AD71C5F276045F0003469BF /* Info.plist */,
+				7A88FE4227619247006C6108 /* Transactions.swift */,
+				7A88FE4727619955006C6108 /* DataStore.swift */,
+				7A5EE1962762F8B5006F63A8 /* InsertData.swift */,
 			);
 			path = NBATransactionApp;
 			sourceTree = "<group>";
@@ -143,6 +154,9 @@
 			dependencies = (
 			);
 			name = NBATransactionApp;
+			packageProductDependencies = (
+				7A88FE4527619925006C6108 /* SQLite */,
+			);
 			productName = NBATransactionApp;
 			productReference = 7AD71C4E276045EF003469BF /* NBATransactionApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 7AD71C45276045EF003469BF;
+			packageReferences = (
+				7A88FE4427619925006C6108 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = 7AD71C4F276045EF003469BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +277,9 @@
 			files = (
 				7AD71C56276045EF003469BF /* ViewController.swift in Sources */,
 				7AD71C52276045EF003469BF /* AppDelegate.swift in Sources */,
+				7A88FE4327619247006C6108 /* Transactions.swift in Sources */,
+				7A88FE4827619955006C6108 /* DataStore.swift in Sources */,
+				7A5EE1972762F8B5006F63A8 /* InsertData.swift in Sources */,
 				7AD71C54276045EF003469BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86383RAB9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NBATransactionApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86383RAB9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NBATransactionApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -618,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A88FE4427619925006C6108 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A88FE4527619925006C6108 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A88FE4427619925006C6108 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AD71C46276045EF003469BF /* Project object */;
 }
