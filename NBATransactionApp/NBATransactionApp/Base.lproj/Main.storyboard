@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,13 +21,12 @@
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Select Fruit">
+                                <buttonConfiguration key="configuration" style="plain" title="Select Team 1">
                                     <backgroundConfiguration key="background"/>
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onClickSelectFruit:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="0kQ-9t-0n4"/>
-                                    <action selector="onClickSelectFruit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y9S-3H-SvD"/>
+                                    <action selector="onClickSelectTeam:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="n51-g5-1xr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpg-Kj-iq4">
@@ -35,13 +34,12 @@
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Select Gender">
+                                <buttonConfiguration key="configuration" style="plain" title="Select Player">
                                     <backgroundConfiguration key="background"/>
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onClickSelectGender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BLu-MD-3iz"/>
-                                    <action selector="onClickSelectGender:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="t3N-pr-BRA"/>
+                                    <action selector="onClickSelectPlayer:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="HbY-Wp-fcf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,8 +56,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Kne-Ud-73O"/>
                     <connections>
-                        <outlet property="btnSelectFruit" destination="Yk3-m8-k4x" id="fAo-uH-9yr"/>
-                        <outlet property="btnSelectGender" destination="Lpg-Kj-iq4" id="QgG-Qv-5lR"/>
+                        <outlet property="btnSelectPlayer" destination="Lpg-Kj-iq4" id="D0k-aV-kms"/>
+                        <outlet property="btnSelectTeam" destination="Yk3-m8-k4x" id="iYe-YB-asb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iN-Pg-cbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -143,8 +141,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="EiQ-vI-RWQ"/>
                     <connections>
-                        <outlet property="btnSelectFruit" destination="Yk3-m8-k4x" id="aew-hU-qoF"/>
-                        <outlet property="btnSelectGender" destination="Lpg-Kj-iq4" id="Jyq-UP-txD"/>
                         <outlet property="tblView" destination="ZBX-oy-eJf" id="UfR-Lz-MZJ"/>
                     </connections>
                 </viewController>

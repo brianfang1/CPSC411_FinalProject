@@ -44,6 +44,7 @@ class Player {
     var teamId : Int64?
     var playerId : Int64?
     
+    
     init(_ fName : String, _ lName : String) {
         firstName = fName
         lastName = lName
@@ -69,6 +70,7 @@ class Player {
         firstName = fName
         lastName = lName
         teamId = tId
+        
     }
     
     

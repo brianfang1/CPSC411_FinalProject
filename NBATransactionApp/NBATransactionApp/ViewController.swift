@@ -11,8 +11,9 @@ class CellClass: UITableViewCell{
     
 }
 class ViewController: UIViewController {
-    @IBOutlet weak var btnSelectFruit: UIButton!
-    @IBOutlet weak var btnSelectGender: UIButton!
+    @IBOutlet weak var btnSelectTeam: UIButton!
+    @IBOutlet weak var btnSelectPlayer: UIButton!
+    var selectedTeam: Team!
     let transparentView = UIView()
     let tableView = UITableView()
     
@@ -80,16 +81,22 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func onClickSelectFruit(_ sender: Any) {
-        dataSource = ["Apple", "Mango", "Orange"]
-        selectedButton = btnSelectFruit
-        addTransparentView(frames: btnSelectFruit.frame)
+    @IBAction func onClickSelectTeam(_ sender: Any) {
+        let Teams = store.getAllTeams()
+        var teamNames = [String]()
+        for team in Teams {
+            teamNames.append(team.teamName)
+        }
+        
+        dataSource = teamNames
+        selectedButton = btnSelectTeam
+        addTransparentView(frames: btnSelectTeam.frame)
     }
     
-    @IBAction func onClickSelectGender(_ sender: Any) {
-        dataSource = ["Male", "Female"]
-        selectedButton = btnSelectGender
-        addTransparentView(frames: btnSelectGender.frame)
+    @IBAction func onClickSelectPlayer(_ sender: Any) {
+        dataSource = ["Paul George", "Carmelo Anthony"]
+        selectedButton = btnSelectPlayer
+        addTransparentView(frames: btnSelectPlayer.frame)
     }
     
 
@@ -107,5 +114,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+        removeTransparentView()
     }
 }
