@@ -30,6 +30,25 @@ class ViewController: UIViewController {
         // ** ONLY RUN ONCE WHEN INITIALIZING DATABASE **
          //insertTeams(store: store)
          //insertPlayers(store: store)
+        
+        
+        /* TEST Trading
+           This trades:
+            Lakers(teamId=1):
+                Carmelo Anthony(playerId=1),
+                Trevor Ariza(playerId=2)
+            Clippers(teamId=2):
+                Ivica Zubac(playerId=33)
+         ** ONLY RUN AFTER INSERTING TEAMS AND PLAYERS **
+        */
+//        let tradeObj =  Trade(Team("Lakers", 1)!, Team("Clippers", 2)!, [Player(1, "Carmelo", "Anthony", 1)!, Player(2, "Trevor", "Ariza", 1)!], [Player(34, "Ivica", "Zubac", 2)!], date: Date.now)
+//        store.createTrade(tradeObj: tradeObj)
+        
+        //Trade back
+//        let tradeObj2 =  Trade(Team("Clippers", 2)!, Team("Lakers", 1)!, [Player(1, "Carmelo", "Anthony", 1)!, Player(2, "Trevor", "Ariza", 1)!], [Player(34, "Ivica", "Zubac", 2)!], date: Date.now)
+//        store.createTrade(tradeObj: tradeObj2)
+        
+        
     }
     func addTransparentView(frames : CGRect) {
         let window = UIApplication.shared.keyWindow
