@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yk3-m8-k4x">
-                                <rect key="frame" x="30" y="60" width="354" height="35.5"/>
+                                <rect key="frame" x="30" y="20" width="354" height="35.5"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpg-Kj-iq4">
-                                <rect key="frame" x="30" y="170.5" width="354" height="35.5"/>
+                                <rect key="frame" x="30" y="75.5" width="354" height="35.5"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pT-9P-oRp">
-                                <rect key="frame" x="30" y="281" width="354" height="35.5"/>
+                                <rect key="frame" x="30" y="131" width="354" height="35.5"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lL-48-SEg">
-                                <rect key="frame" x="30" y="391.5" width="354" height="35.5"/>
+                                <rect key="frame" x="30" y="186.5" width="354" height="35.5"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -69,8 +69,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-zk-moN">
-                                <rect key="frame" x="162" y="527" width="90" height="31"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="162" y="252" width="90" height="31"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Trade"/>
                                 <connections>
@@ -82,21 +82,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Scz-zk-moN" secondAttribute="trailing" constant="162" id="6B1-6E-JX0"/>
-                            <constraint firstItem="2pT-9P-oRp" firstAttribute="top" secondItem="Lpg-Kj-iq4" secondAttribute="bottom" constant="75" id="6oE-4k-pgh"/>
                             <constraint firstItem="9lL-48-SEg" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="Arg-D7-AOD"/>
-                            <constraint firstItem="Scz-zk-moN" firstAttribute="top" secondItem="9lL-48-SEg" secondAttribute="bottom" constant="100" id="BNx-fX-za9"/>
-                            <constraint firstItem="Lpg-Kj-iq4" firstAttribute="top" secondItem="Yk3-m8-k4x" secondAttribute="bottom" constant="73.5" id="GKD-61-M1l"/>
+                            <constraint firstItem="Yk3-m8-k4x" firstAttribute="top" secondItem="XT4-IR-8t3" secondAttribute="top" constant="20" id="BcO-fF-tWr"/>
                             <constraint firstItem="Yk3-m8-k4x" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="KbG-Y2-LfX"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="2pT-9P-oRp" secondAttribute="trailing" constant="30" id="ZIx-l4-qab"/>
-                            <constraint firstItem="Yk3-m8-k4x" firstAttribute="top" secondItem="XT4-IR-8t3" secondAttribute="top" constant="60" id="ZVR-5M-V0A"/>
+                            <constraint firstItem="9lL-48-SEg" firstAttribute="top" secondItem="2pT-9P-oRp" secondAttribute="bottom" constant="20" id="bLl-It-ObC"/>
                             <constraint firstItem="Scz-zk-moN" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="162" id="d94-78-yKH"/>
-                            <constraint firstItem="Lpg-Kj-iq4" firstAttribute="top" secondItem="Yk3-m8-k4x" secondAttribute="bottom" constant="75" id="dUK-eu-ru7"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Yk3-m8-k4x" secondAttribute="trailing" constant="30" id="e7w-UO-LRZ"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Lpg-Kj-iq4" secondAttribute="trailing" constant="30" id="ef1-p2-gzM"/>
+                            <constraint firstItem="Lpg-Kj-iq4" firstAttribute="top" secondItem="Yk3-m8-k4x" secondAttribute="bottom" constant="20" id="hPF-by-rQr"/>
                             <constraint firstItem="Lpg-Kj-iq4" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="kyR-UX-370"/>
-                            <constraint firstItem="9lL-48-SEg" firstAttribute="top" secondItem="2pT-9P-oRp" secondAttribute="bottom" constant="75" id="oP0-Hv-nzf"/>
                             <constraint firstItem="2pT-9P-oRp" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="rhF-qc-XDF"/>
+                            <constraint firstItem="Scz-zk-moN" firstAttribute="top" secondItem="9lL-48-SEg" secondAttribute="bottom" constant="30" id="s4C-B3-pxE"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="9lL-48-SEg" secondAttribute="trailing" constant="30" id="seK-vn-FkT"/>
+                            <constraint firstItem="2pT-9P-oRp" firstAttribute="top" secondItem="Lpg-Kj-iq4" secondAttribute="bottom" constant="20" id="yQz-6r-Clo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kne-Ud-73O"/>

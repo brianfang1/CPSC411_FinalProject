@@ -107,6 +107,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onClickSelectPlayer(_ sender: Any) {
+        if(btnSelectTeam1.currentTitle != nil) {
+            var selectedTeam1 : Team
+          
         let Players = store.getAllPlayers()
         var Names = [String]()
         for player in Players {
@@ -116,8 +119,11 @@ class ViewController: UIViewController {
         selectedButton = btnSelectPlayer1
         addTransparentView(frames: btnSelectPlayer1.frame)
     }
-    
+    }
     @IBAction func onClickSelectPlayer2(_ sender: Any) {
+        if(btnSelectTeam2.currentTitle != nil) {
+            var selectedTeam2 : Team
+            
         let Players = store.getAllPlayers()
         var Names = [String]()
         for player in Players {
@@ -127,9 +133,11 @@ class ViewController: UIViewController {
         selectedButton = btnSelectPlayer2
         addTransparentView(frames: btnSelectPlayer2.frame)
     }
+    }
     
     @IBAction func onClickAddTrade(_ sender: Any) {
-      
+        var addedTrade : Trade
+        
     }
     
 
