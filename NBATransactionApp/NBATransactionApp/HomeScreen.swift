@@ -38,10 +38,11 @@ class HomeScreen: UIViewController,  UITableViewDataSource, UITableViewDelegate 
 //            tableView.deleteRows(at: [indexPath], with: .automatic)
 //        }
 //    }
+
     
     @IBOutlet var tblView : UITableView!
     let store = DataStore.get()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tblView.dataSource = self

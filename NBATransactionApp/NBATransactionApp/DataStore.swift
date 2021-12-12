@@ -151,7 +151,7 @@ class DataStore {
         let firstName = Expression<String>("first_name")
         let lastName = Expression<String>("last_name")
         let tbl = database.playerTbl!.order(firstName.desc, lastName)
-        let rs = try! conn.prepare(tbl.filter(database.teamNameCol == team.teamName))
+        let rs = try! conn.prepare(tbl.filter(database.teamId == team.teamId!))
         for r in rs {
             let playerObj = try! Player(r.get(database.fnCol), r.get(database.lnCol), r.get(database.teamId))
             playersList.append(playerObj!)
@@ -195,6 +195,20 @@ class DataStore {
         let tbl = database.teamTbl!
         let conn = database.conn!
         let filterTbl = tbl.filter(database.teamId == id)
+        let rs = try! conn.prepare(filterTbl)
+        for r in rs {
+            // There should only be one as teamId is unique
+                teamObj = try! Team(r.get(database.teamNameCol), r.get(database.teamId))
+        }
+        return teamObj
+    }
+    
+    func getTeamByTeamName( teamName : String) -> Team {
+        // ASSUME TEAM EXISTS IN DB
+        var teamObj : Team!
+        let tbl = database.teamTbl!
+        let conn = database.conn!
+        let filterTbl = tbl.filter(database.teamNameCol == teamName)
         let rs = try! conn.prepare(filterTbl)
         for r in rs {
             // There should only be one as teamId is unique
