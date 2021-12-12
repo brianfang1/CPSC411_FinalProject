@@ -11,9 +11,10 @@ class CellClass: UITableViewCell{
     
 }
 class ViewController: UIViewController {
-    @IBOutlet weak var btnSelectTeam: UIButton!
-    @IBOutlet weak var btnSelectPlayer: UIButton!
-    var selectedTeam: Team!
+    @IBOutlet weak var btnSelectTeam1: UIButton!
+    @IBOutlet weak var btnSelectPlayer1: UIButton!
+    @IBOutlet weak var btnSelectTeam2: UIButton!
+    @IBOutlet weak var btnSelectPlayer2: UIButton!
     let transparentView = UIView()
     let tableView = UITableView()
     
@@ -89,14 +90,32 @@ class ViewController: UIViewController {
         }
         
         dataSource = teamNames
-        selectedButton = btnSelectTeam
-        addTransparentView(frames: btnSelectTeam.frame)
+        selectedButton = btnSelectTeam1
+        addTransparentView(frames: btnSelectTeam1.frame)
+    }
+    
+    @IBAction func onClickSelectTeam2(_ sender: Any) {
+        let Teams = store.getAllTeams()
+        var teamNames = [String]()
+        for team in Teams {
+            teamNames.append(team.teamName)
+        }
+        
+        dataSource = teamNames
+        selectedButton = btnSelectTeam2
+        addTransparentView(frames: btnSelectTeam2.frame)
     }
     
     @IBAction func onClickSelectPlayer(_ sender: Any) {
         dataSource = ["Paul George", "Carmelo Anthony"]
-        selectedButton = btnSelectPlayer
-        addTransparentView(frames: btnSelectPlayer.frame)
+        selectedButton = btnSelectPlayer1
+        addTransparentView(frames: btnSelectPlayer1.frame)
+    }
+    
+    @IBAction func onClickSelectPlayer2(_ sender: Any) {
+        dataSource = ["Paul George", "Carmelo Anthony"]
+        selectedButton = btnSelectPlayer2
+        addTransparentView(frames: btnSelectPlayer2.frame)
     }
     
 

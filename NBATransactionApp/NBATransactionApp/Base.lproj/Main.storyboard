@@ -26,11 +26,11 @@
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onClickSelectTeam:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="n51-g5-1xr"/>
+                                    <action selector="onClickSelectTeam:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="KRo-12-Dg3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpg-Kj-iq4">
-                                <rect key="frame" x="30" y="169" width="354" height="35.5"/>
+                                <rect key="frame" x="30" y="170.5" width="354" height="35.5"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -39,25 +39,60 @@
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onClickSelectPlayer:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="HbY-Wp-fcf"/>
+                                    <action selector="onClickSelectPlayer:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="rqP-J9-YdX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pT-9P-oRp">
+                                <rect key="frame" x="30" y="281" width="354" height="35.5"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select Team 2">
+                                    <backgroundConfiguration key="background"/>
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onClickSelectTeam2:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="nmQ-qg-adQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lL-48-SEg">
+                                <rect key="frame" x="30" y="391.5" width="354" height="35.5"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select Player">
+                                    <backgroundConfiguration key="background"/>
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onClickSelectPlayer2:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="Fc3-MK-3pK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XT4-IR-8t3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2pT-9P-oRp" firstAttribute="top" secondItem="Lpg-Kj-iq4" secondAttribute="bottom" constant="75" id="6oE-4k-pgh"/>
+                            <constraint firstItem="9lL-48-SEg" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="Arg-D7-AOD"/>
                             <constraint firstItem="Lpg-Kj-iq4" firstAttribute="top" secondItem="Yk3-m8-k4x" secondAttribute="bottom" constant="73.5" id="GKD-61-M1l"/>
                             <constraint firstItem="Yk3-m8-k4x" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="KbG-Y2-LfX"/>
+                            <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="2pT-9P-oRp" secondAttribute="trailing" constant="30" id="ZIx-l4-qab"/>
                             <constraint firstItem="Yk3-m8-k4x" firstAttribute="top" secondItem="XT4-IR-8t3" secondAttribute="top" constant="60" id="ZVR-5M-V0A"/>
+                            <constraint firstItem="Lpg-Kj-iq4" firstAttribute="top" secondItem="Yk3-m8-k4x" secondAttribute="bottom" constant="75" id="dUK-eu-ru7"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Yk3-m8-k4x" secondAttribute="trailing" constant="30" id="e7w-UO-LRZ"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Lpg-Kj-iq4" secondAttribute="trailing" constant="30" id="ef1-p2-gzM"/>
                             <constraint firstItem="Lpg-Kj-iq4" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="kyR-UX-370"/>
+                            <constraint firstItem="9lL-48-SEg" firstAttribute="top" secondItem="2pT-9P-oRp" secondAttribute="bottom" constant="75" id="oP0-Hv-nzf"/>
+                            <constraint firstItem="2pT-9P-oRp" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="rhF-qc-XDF"/>
+                            <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="9lL-48-SEg" secondAttribute="trailing" constant="30" id="seK-vn-FkT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kne-Ud-73O"/>
                     <connections>
-                        <outlet property="btnSelectPlayer" destination="Lpg-Kj-iq4" id="D0k-aV-kms"/>
-                        <outlet property="btnSelectTeam" destination="Yk3-m8-k4x" id="iYe-YB-asb"/>
+                        <outlet property="btnSelectPlayer1" destination="Lpg-Kj-iq4" id="r2k-6l-yX4"/>
+                        <outlet property="btnSelectPlayer2" destination="9lL-48-SEg" id="yhC-6n-HOq"/>
+                        <outlet property="btnSelectTeam1" destination="Yk3-m8-k4x" id="Tnx-qf-rc4"/>
+                        <outlet property="btnSelectTeam2" destination="2pT-9P-oRp" id="SjT-f5-BPS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iN-Pg-cbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
