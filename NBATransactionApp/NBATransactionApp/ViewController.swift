@@ -139,8 +139,6 @@ class ViewController: UIViewController {
         var addedTrade : Trade
         
     }
-    
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource

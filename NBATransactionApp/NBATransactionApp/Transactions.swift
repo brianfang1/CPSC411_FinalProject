@@ -119,6 +119,19 @@ func players_ArrayToString(_ players : [Player]) -> String {
     return playerIdString
 }
 
+func playerNames_ArrayToString(_ players : [Player]) -> String {
+    // playerNameString contains full name of players ex. "Lebron James, Anthony Davis, ..."
+    var playerNameArray = [String]()
+    var playerNameString : String
+    for player in players {
+        playerNameArray.append(player.getFullName())
+    }
+    
+    playerNameString = playerNameArray.joined(separator: ", ")
+    
+    return playerNameString
+}
+
 func players_StringToArray(_ playerIdString : String ) -> [Player] {
     // Given a String of playerId, create a an array of Player objects. playerIdString = "1, 2, 3, ..."
     var playerIdArray : [String]

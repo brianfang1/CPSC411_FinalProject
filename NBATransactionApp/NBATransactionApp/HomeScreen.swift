@@ -51,4 +51,21 @@ class HomeScreen: UIViewController,  UITableViewDataSource, UITableViewDelegate 
     override func viewWillAppear(_ animated: Bool) {
         tblView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "TradeDetails":
+            if let row = tblView.indexPathForSelectedRow?.row {
+                let tradeObj = store.getAllTrades()[row]
+                let viewController = segue.destination as! DetailedViewScreen
+                viewController.trade = tradeObj
+            }
+        case "AddTrade":
+            let viewController = segue.destination as! ViewController
+            //viewController.trade = nil
+            // NOTHING NEEDS TO BE SENT FROM HOME TO TRADE SCREEN
+        default:
+            print("Unexpected segure identifier ... ")
+        }
+    }
 }
