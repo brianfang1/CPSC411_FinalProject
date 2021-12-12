@@ -142,6 +142,23 @@ class DataStore {
         return playersList
     }
     
+    
+    // NOT tested
+    // Get all players on a team
+    func getAllPlayersOnTeam(_ team : Team) -> [Player] {
+        var playersList = [Player]()
+        let conn = database.conn!
+        let firstName = Expression<String>("first_name")
+        let lastName = Expression<String>("last_name")
+        let tbl = database.playerTbl!.order(firstName.desc, lastName)
+        let rs = try! conn.prepare(tbl.filter(database.teamNameCol == team.teamName))
+        for r in rs {
+            let playerObj = try! Player(r.get(database.fnCol), r.get(database.lnCol), r.get(database.teamId))
+            playersList.append(playerObj!)
+        }
+        return playersList
+    }
+    
     // NOT tested
     func getAllTrades() -> [Trade] {
         var tradesList = [Trade]()
@@ -241,5 +258,15 @@ class DataStore {
             let updateStmt = playerById.update(teamId <- tradeObj.team1.teamId!)
             try! conn.run(updateStmt)
         }
+    }
+    
+    func delTrade( tradeObj : Trade) {
+        // Removes trade from table of trades BUT DOES NOT REVERSE TRADE
+        // Assumes tradeObj CONTAINS A VALID TRADE ID
+        print("Deleting trade : \(tradeObj.tradeId)")
+        let tbl = database.tradeTbl!
+        let conn = database.conn!
+        let filterTbl = tbl.filter(database.tradeId == tradeObj.tradeId!)
+        try! conn.run(filterTbl.delete())
     }
 }

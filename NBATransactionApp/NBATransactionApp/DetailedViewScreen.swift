@@ -16,6 +16,10 @@ class DetailedViewScreen : UIViewController{
     @IBOutlet var playersLabel_2 : UILabel!
     var trade : Trade!
     
+    @IBAction func delBtnClicked(_ sender : UIButton) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
