@@ -107,13 +107,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onClickSelectPlayer(_ sender: Any) {
-        dataSource = ["Paul George", "Carmelo Anthony"]
+        let Players = store.getAllPlayers()
+        var Names = [String]()
+        for player in Players {
+            Names.append(player.getFullName())
+        }
+        dataSource = Names
         selectedButton = btnSelectPlayer1
         addTransparentView(frames: btnSelectPlayer1.frame)
     }
     
     @IBAction func onClickSelectPlayer2(_ sender: Any) {
-        dataSource = ["Paul George", "Carmelo Anthony"]
+        let Players = store.getAllPlayers()
+        var Names = [String]()
+        for player in Players {
+            Names.append(player.getFullName())
+        }
+        dataSource = Names
         selectedButton = btnSelectPlayer2
         addTransparentView(frames: btnSelectPlayer2.frame)
     }
