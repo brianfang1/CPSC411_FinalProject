@@ -68,16 +68,28 @@
                                     <action selector="onClickSelectPlayer2:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="Fc3-MK-3pK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-zk-moN">
+                                <rect key="frame" x="162" y="527" width="90" height="31"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Trade"/>
+                                <connections>
+                                    <action selector="onClickAddTrade:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="cQp-w7-lf4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XT4-IR-8t3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Scz-zk-moN" secondAttribute="trailing" constant="162" id="6B1-6E-JX0"/>
                             <constraint firstItem="2pT-9P-oRp" firstAttribute="top" secondItem="Lpg-Kj-iq4" secondAttribute="bottom" constant="75" id="6oE-4k-pgh"/>
                             <constraint firstItem="9lL-48-SEg" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="Arg-D7-AOD"/>
+                            <constraint firstItem="Scz-zk-moN" firstAttribute="top" secondItem="9lL-48-SEg" secondAttribute="bottom" constant="100" id="BNx-fX-za9"/>
                             <constraint firstItem="Lpg-Kj-iq4" firstAttribute="top" secondItem="Yk3-m8-k4x" secondAttribute="bottom" constant="73.5" id="GKD-61-M1l"/>
                             <constraint firstItem="Yk3-m8-k4x" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="KbG-Y2-LfX"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="2pT-9P-oRp" secondAttribute="trailing" constant="30" id="ZIx-l4-qab"/>
                             <constraint firstItem="Yk3-m8-k4x" firstAttribute="top" secondItem="XT4-IR-8t3" secondAttribute="top" constant="60" id="ZVR-5M-V0A"/>
+                            <constraint firstItem="Scz-zk-moN" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="162" id="d94-78-yKH"/>
                             <constraint firstItem="Lpg-Kj-iq4" firstAttribute="top" secondItem="Yk3-m8-k4x" secondAttribute="bottom" constant="75" id="dUK-eu-ru7"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Yk3-m8-k4x" secondAttribute="trailing" constant="30" id="e7w-UO-LRZ"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Lpg-Kj-iq4" secondAttribute="trailing" constant="30" id="ef1-p2-gzM"/>

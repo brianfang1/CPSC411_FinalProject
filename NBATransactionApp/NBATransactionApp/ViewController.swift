@@ -128,6 +128,10 @@ class ViewController: UIViewController {
         addTransparentView(frames: btnSelectPlayer2.frame)
     }
     
+    @IBAction func onClickAddTrade(_ sender: Any) {
+      
+    }
+    
 
 }
 
