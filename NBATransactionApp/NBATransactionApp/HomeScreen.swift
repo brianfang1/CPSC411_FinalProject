@@ -47,6 +47,17 @@ class HomeScreen: UIViewController,  UITableViewDataSource, UITableViewDelegate 
         super.viewDidLoad()
         tblView.dataSource = self
         tblView.delegate = self
+        
+        
+        
+        // Initialize with team, player, and transaction data if it does not exist
+        // Starter Data
+        if(store.getAllPlayers().count == 0) {
+            insertTeams(store: store)
+            insertPlayers(store: store)
+            insertTransactions(store: store)
+        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
