@@ -64,3 +64,13 @@ func insertPlayers(store : DataStore) {
         store.createPlayer(playerObj: player!)
     }
 }
+
+// Only run once to store transactions into database
+func insertTransactions(store : DataStore) {
+    let tradeObj =  Trade(Team("Lakers", 1)!, Team("Clippers", 2)!, [Player(1, "Carmelo", "Anthony", 1)!, Player(2, "Trevor", "Ariza", 1)!], [Player(34, "Ivica", "Zubac", 2)!], date: Date.now)
+    
+    let tradeObj2 =  Trade(Team("Clippers", 2)!, Team("Lakers", 1)!, [Player(1, "Carmelo", "Anthony", 1)!, Player(2, "Trevor", "Ariza", 1)!], [Player(34, "Ivica", "Zubac", 2)!], date: Date.now)
+    
+    store.createTrade(tradeObj: tradeObj)
+    store.createTrade(tradeObj: tradeObj2)
+}

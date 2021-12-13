@@ -153,7 +153,7 @@ class DataStore {
         let tbl = database.playerTbl!.order(firstName.desc, lastName)
         let rs = try! conn.prepare(tbl.filter(database.teamId == team.teamId!))
         for r in rs {
-            let playerObj = try! Player(r.get(database.fnCol), r.get(database.lnCol), r.get(database.teamId))
+            let playerObj = try! Player(r.get(database.fnCol), r.get(database.lnCol), r.get(database.teamId), r.get(database.playerId))
             playersList.append(playerObj!)
         }
         return playersList

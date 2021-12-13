@@ -17,6 +17,25 @@ class DetailedViewScreen : UIViewController{
     var trade : Trade!
     
     @IBAction func delBtnClicked(_ sender : UIButton) {
+        // Use UIAlertController to ask user if he REALLY wants to delete
+        let alertBox = UIAlertController(title: "Delete Trade", message: "Are you sure you want to delete?", preferredStyle: .alert)
+        
+        // Create delete button action handler
+        let delete = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
+            store.delTrade(tradeObj: self.trade)
+            self.navigationController?.popViewController(animated: true)
+        })
+        
+        // Create cancer button action handler
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
+            print("Canceled delete action.")
+        })
+        
+        // Add UIAlertActions to UIAlertController
+        alertBox.addAction(delete)
+        alertBox.addAction(cancel)
+        
+        self.present(alertBox, animated: true, completion: nil)
         
     }
     

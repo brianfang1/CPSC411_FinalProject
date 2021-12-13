@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     let tableView = UITableView()
     var team1: Team!
     var team2: Team!
+    var team1_playersList = [Player]()
+    var team2_playersList = [Player]()
     var player1 = [Player]()
     var player2 = [Player]()
     var selectedButton = UIButton()
@@ -32,26 +34,12 @@ class ViewController: UIViewController {
         var store = DataStore.get()
         
         // Loads database with team info and player info
-        // ** ONLY RUN ONCE WHEN INITIALIZING DATABASE **
-         //insertTeams(store: store)
-         //insertPlayers(store: store)
-        
-        
-        /* TEST Trading
-           This trades:
-            Lakers(teamId=1):
-                Carmelo Anthony(playerId=1),
-                Trevor Ariza(playerId=2)
-            Clippers(teamId=2):
-                Ivica Zubac(playerId=33)
-         ** ONLY RUN AFTER INSERTING TEAMS AND PLAYERS **
-        */
-//        let tradeObj =  Trade(Team("Lakers", 1)!, Team("Clippers", 2)!, [Player(1, "Carmelo", "Anthony", 1)!, Player(2, "Trevor", "Ariza", 1)!], [Player(34, "Ivica", "Zubac", 2)!], date: Date.now)
-//        store.createTrade(tradeObj: tradeObj)
-        
-        //Trade back
-//        let tradeObj2 =  Trade(Team("Clippers", 2)!, Team("Lakers", 1)!, [Player(1, "Carmelo", "Anthony", 1)!, Player(2, "Trevor", "Ariza", 1)!], [Player(34, "Ivica", "Zubac", 2)!], date: Date.now)
-//        store.createTrade(tradeObj: tradeObj2)
+        // Also tests trading
+//        // ** ONLY RUN ONCE WHEN INITIALIZING DATABASE **
+//         insertTeams(store: store)
+//         insertPlayers(store: store)
+//         insertTransactions(store: store)
+
         
         
     }
@@ -118,9 +106,8 @@ class ViewController: UIViewController {
         var Names = [String]()
         for player in Players {
             Names.append(player.getFullName())
-            
+            team1_playersList.append(player)
         }
-          player1 = Players
         dataSource = Names
         selectedButton = btnSelectPlayer1
         addTransparentView(frames: btnSelectPlayer1.frame)
@@ -135,8 +122,8 @@ class ViewController: UIViewController {
         var Names = [String]()
         for player in Players {
             Names.append(player.getFullName())
+            team2_playersList.append(player)
         }
-            player2 = Players
         dataSource = Names
         selectedButton = btnSelectPlayer2
         addTransparentView(frames: btnSelectPlayer2.frame)
@@ -149,10 +136,20 @@ class ViewController: UIViewController {
                 if(btnSelectPlayer1.currentTitle != nil){
                     if(btnSelectPlayer2.currentTitle != nil)
                     {
-                        
+                        for player in team1_playersList {
+                            if(player.getFullName() == btnSelectPlayer1.currentTitle) {
+                                player1.append(player)
+                            }
+                        }
+                        for player in team2_playersList {
+                            if(player.getFullName() == btnSelectPlayer2.currentTitle) {
+                                player2.append(player)
+                            }
+                        }
+                                    
                         let tradeObj = Trade(team1, team2, player1, player2, date: Date.now)
                         store.createTrade(tradeObj: tradeObj)
-                        dismiss(animated: true, completion: nil)
+                        self.navigationController?.popViewController(animated: true)
                         
                     }
                 }

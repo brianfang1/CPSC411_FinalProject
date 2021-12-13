@@ -56,6 +56,13 @@ class Player {
         teamId = tId
     }
     
+    init?(_ fName : String, _ lName : String, _ tId : Int64, _ pId : Int64) {
+        firstName = fName
+        lastName = lName
+        teamId = tId
+        playerId = pId
+    }
+    
     init?(id : Int64) {
         // No error handling. Assume ID EXISTS or else error WILL occur
         let playerObj = store.getPlayerById(id)
