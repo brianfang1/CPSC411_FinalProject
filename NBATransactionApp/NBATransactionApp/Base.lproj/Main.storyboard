@@ -68,29 +68,32 @@
                                     <action selector="onClickSelectPlayer2:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="Fc3-MK-3pK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3u-Pf-OIl">
-                                <rect key="frame" x="174" y="350" width="66" height="48"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-zk-moN">
+                                <rect key="frame" x="162" y="340" width="90" height="31"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Trade"/>
+                                <connections>
+                                    <action selector="onClickAddTrade:" destination="Whs-wx-Hwa" eventType="touchUpInside" id="cQp-w7-lf4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XT4-IR-8t3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Scz-zk-moN" secondAttribute="trailing" constant="162" id="6B1-6E-JX0"/>
                             <constraint firstItem="9lL-48-SEg" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="Arg-D7-AOD"/>
                             <constraint firstItem="Yk3-m8-k4x" firstAttribute="top" secondItem="XT4-IR-8t3" secondAttribute="top" constant="20" id="BcO-fF-tWr"/>
                             <constraint firstItem="Yk3-m8-k4x" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="KbG-Y2-LfX"/>
-                            <constraint firstItem="O3u-Pf-OIl" firstAttribute="top" secondItem="9lL-48-SEg" secondAttribute="bottom" constant="40" id="Naq-oA-eXP"/>
-                            <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="O3u-Pf-OIl" secondAttribute="trailing" constant="174" id="Vf0-cM-fd5"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="2pT-9P-oRp" secondAttribute="trailing" constant="30" id="ZIx-l4-qab"/>
                             <constraint firstItem="9lL-48-SEg" firstAttribute="top" secondItem="2pT-9P-oRp" secondAttribute="bottom" constant="20" id="bLl-It-ObC"/>
+                            <constraint firstItem="Scz-zk-moN" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="162" id="d94-78-yKH"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Yk3-m8-k4x" secondAttribute="trailing" constant="30" id="e7w-UO-LRZ"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="Lpg-Kj-iq4" secondAttribute="trailing" constant="30" id="ef1-p2-gzM"/>
                             <constraint firstItem="Lpg-Kj-iq4" firstAttribute="top" secondItem="Yk3-m8-k4x" secondAttribute="bottom" constant="20" id="hPF-by-rQr"/>
                             <constraint firstItem="Lpg-Kj-iq4" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="kyR-UX-370"/>
-                            <constraint firstItem="O3u-Pf-OIl" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="174" id="n4E-Dc-uim"/>
                             <constraint firstItem="2pT-9P-oRp" firstAttribute="leading" secondItem="XT4-IR-8t3" secondAttribute="leading" constant="30" id="rhF-qc-XDF"/>
+                            <constraint firstItem="Scz-zk-moN" firstAttribute="top" secondItem="9lL-48-SEg" secondAttribute="bottom" constant="30" id="s4C-B3-pxE"/>
                             <constraint firstItem="XT4-IR-8t3" firstAttribute="trailing" secondItem="9lL-48-SEg" secondAttribute="trailing" constant="30" id="seK-vn-FkT"/>
                             <constraint firstItem="2pT-9P-oRp" firstAttribute="top" secondItem="Lpg-Kj-iq4" secondAttribute="bottom" constant="20" id="yQz-6r-Clo"/>
                         </constraints>
