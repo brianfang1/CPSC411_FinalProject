@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnSelectPlayer2: UIButton!
     let transparentView = UIView()
     let tableView = UITableView()
-    
+    var team1: Team!
+    var team2: Team!
+    var player1 = [Player]()
+    var player2 = [Player]()
     var selectedButton = UIButton()
     var dataSource = [String]()
     override func viewDidLoad() {
@@ -109,12 +112,15 @@ class ViewController: UIViewController {
     @IBAction func onClickSelectPlayer(_ sender: Any) {
         if(btnSelectTeam1.currentTitle != nil) {
             var selectedTeam1 : Team
-          
-        let Players = store.getAllPlayers()
+            selectedTeam1 = store.getTeamByTeamName(teamName: btnSelectTeam1.currentTitle!)
+            team1 = selectedTeam1
+        let Players = store.getAllPlayersOnTeam(selectedTeam1)
         var Names = [String]()
         for player in Players {
             Names.append(player.getFullName())
+            
         }
+          player1 = Players
         dataSource = Names
         selectedButton = btnSelectPlayer1
         addTransparentView(frames: btnSelectPlayer1.frame)
@@ -123,12 +129,14 @@ class ViewController: UIViewController {
     @IBAction func onClickSelectPlayer2(_ sender: Any) {
         if(btnSelectTeam2.currentTitle != nil) {
             var selectedTeam2 : Team
-            
-        let Players = store.getAllPlayers()
+            selectedTeam2 = store.getTeamByTeamName(teamName: btnSelectTeam2.currentTitle!)
+            team2 = selectedTeam2
+        let Players = store.getAllPlayersOnTeam(selectedTeam2)
         var Names = [String]()
         for player in Players {
             Names.append(player.getFullName())
         }
+            player2 = Players
         dataSource = Names
         selectedButton = btnSelectPlayer2
         addTransparentView(frames: btnSelectPlayer2.frame)
@@ -136,8 +144,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onClickAddTrade(_ sender: Any) {
-        var addedTrade : Trade
-        
+        if (btnSelectTeam1.currentTitle != nil){
+            if(btnSelectTeam2.currentTitle != nil){
+                if(btnSelectPlayer1.currentTitle != nil){
+                    if(btnSelectPlayer2.currentTitle != nil)
+                    {
+                        
+                        let tradeObj = Trade(team1, team2, player1, player2, date: Date.now)
+                        store.createTrade(tradeObj: tradeObj)
+                        dismiss(animated: true, completion: nil)
+                        
+                    }
+                }
+            }
+        }
     }
 }
 
